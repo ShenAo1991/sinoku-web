@@ -24,6 +24,7 @@
         <sinoku-common.version>1.0-SNAPSHOT</sinoku-common.version>
         <sinoku-facade.version>1.0-SNAPSHOT</sinoku-facade.version>
         <sinoku-service.version>1.0-SNAPSHOT</sinoku-service.version>
+        <sinoku-common-config>1.0-SNAPSHOT</sinoku-common-config>
         <sinoku-web>1.0-SNAPSHOT</sinoku-web>
     </properties>
 
@@ -32,6 +33,7 @@
         <module>sinoku-common</module>
         <module>sinoku-facade</module>
         <module>sinoku-service</module>
+        <module>sinoku-common-config</module>
     </modules>
 
     <dependencyManagement>
