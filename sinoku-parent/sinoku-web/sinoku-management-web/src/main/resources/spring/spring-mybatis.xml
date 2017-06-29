@@ -63,7 +63,7 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.autohome.travelplat.management.dao" />
+		<property name="basePackage" value="org.sinoku.web.management.dao" />
 	</bean>
 	
 	<!-- 将数据源映射到sqlSessionFactory中 -->

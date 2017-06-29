@@ -22,7 +22,6 @@
     <!--自动扫描的包名-->
     <!--设置使用注解的类所在的jar包-->
     <context:component-scan base-package="org.sinoku.web.*"/>
-    <!--<context:component-scan base-package="com.autohome.jia"/>-->
 
     <!--&lt;!&ndash;默认的注解映射的支持&ndash;&gt;-->
     <!--<mvc:annotation-driven/>是一种简写形式，完全可以手动配置替代这种简写形式，简写形式可以让初学都快速应用默认配置方案。<mvc:annotation-driven/>会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter两个bean,是springMVC为@Controllers分发请求所必须的。-->
