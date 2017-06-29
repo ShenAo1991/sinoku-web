@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * Created by ao.shen on 2017/6/29.
+ *  系统运维用户controller
+ *  Created by ao.shen on 2017/6/29.
  */
 @Controller
 @RequestMapping(value = "/management/user")
