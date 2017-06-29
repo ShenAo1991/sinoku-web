@@ -22,11 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="sinoku-common" />
+        <module name="sinoku-facade" />
+        <module name="sinoku-service" />
         <module name="sinoku-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="sinoku-common" target="1.5" />
+      <module name="sinoku-facade" target="1.5" />
       <module name="sinoku-parent" target="1.5" />
+      <module name="sinoku-service" target="1.5" />
       <module name="sinoku-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
