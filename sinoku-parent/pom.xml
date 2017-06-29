@@ -25,7 +25,8 @@
         <sinoku-facade.version>1.0-SNAPSHOT</sinoku-facade.version>
         <sinoku-service.version>1.0-SNAPSHOT</sinoku-service.version>
         <sinoku-common-config>1.0-SNAPSHOT</sinoku-common-config>
-        <sinoku-web>1.0-SNAPSHOT</sinoku-web>
+        <sinoku-management-web.version>1.0-SNAPSHOT</sinoku-management-web.version>
+        <sinoku-portal-web.version>1.0-SNAPSHOT</sinoku-portal-web.version>
     </properties>
 
     <modules>
