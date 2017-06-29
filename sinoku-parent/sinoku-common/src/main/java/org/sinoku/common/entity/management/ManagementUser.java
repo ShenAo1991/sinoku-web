@@ -23,6 +23,9 @@ public class ManagementUser implements Serializable{
     /**更新时间*/
     private Date updateTime;
 
+    /**手机号码*/
+    private String mobileNum;
+
     /**是否删除 0否 1是*/
     private Integer isDelete;
 
@@ -73,5 +76,13 @@ public class ManagementUser implements Serializable{
 
     public void setIsDelete(Integer isDelete) {
         this.isDelete = isDelete;
+    }
+
+    public String getMobileNum() {
+        return mobileNum;
+    }
+
+    public void setMobileNum(String mobileNum) {
+        this.mobileNum = mobileNum;
     }
 }

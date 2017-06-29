@@ -12,4 +12,14 @@
     <artifactId>sinoku-facade</artifactId>
 
 
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.sinoku</groupId>
+            <artifactId>sinoku-common</artifactId>
+            <version>${sinoku-common.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

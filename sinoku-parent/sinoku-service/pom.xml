@@ -15,7 +15,7 @@
         <dependency>
             <groupId>org.sinoku</groupId>
             <artifactId>sinoku-facade</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${sinoku-facade.version}</version>
         </dependency>
         <dependency>
             <groupId>jstl</groupId>

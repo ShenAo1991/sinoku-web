@@ -14,7 +14,7 @@
             <dependency>
                 <groupId>org.sinoku</groupId>
                 <artifactId>sinoku-service</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${sinoku-service.version}</version>
             </dependency>
         <dependency>
             <groupId>junit</groupId>
