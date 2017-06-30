@@ -1,12 +1,15 @@
 package org.sinoku.common.entity.management;
 
+import org.sinoku.common.entity.common.CommonEntity;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * 运营用户Bean
  * Created by ao.shen on 2017/6/29.
  */
-public class ManagementUser implements Serializable{
+public class ManagementUser extends CommonEntity implements Serializable{
 
     /**主键id*/
     private Integer id;
