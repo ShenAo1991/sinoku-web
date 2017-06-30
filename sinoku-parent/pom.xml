@@ -21,7 +21,7 @@
         <sinoku-common.version>1.0-SNAPSHOT</sinoku-common.version>
         <sinoku-facade.version>1.0-SNAPSHOT</sinoku-facade.version>
         <sinoku-service.version>1.0-SNAPSHOT</sinoku-service.version>
-        <sinoku-common-config>1.0-SNAPSHOT</sinoku-common-config>
+        <sinoku-common-config.version>1.0-SNAPSHOT</sinoku-common-config.version>
         <sinoku-management-web.version>1.0-SNAPSHOT</sinoku-management-web.version>
         <!-- spring版本号 -->
         <spring.version>4.2.5.RELEASE</spring.version>
