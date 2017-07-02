@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 运营角色
  * Created by ao.shen on 2017/6/30.
  */
-public class ManagementRole extends CommonEntity implements Serializable{
+public class ManagementRoleEntity extends CommonEntity implements Serializable{
 
     private Integer id;
 
