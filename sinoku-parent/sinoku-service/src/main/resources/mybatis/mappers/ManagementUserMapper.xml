@@ -3,7 +3,7 @@
 <mapper namespace="org.sinoku.web.dao.management.ManagementUserDao" >
 
 
-    <select id="getManagementUser" resultType="org.sinoku.common.entity.management.ManagementUser">
+    <select id="getManagementUser" resultType="org.sinoku.common.entity.management.ManagementUserEntity">
       SELECT name,password
       FROM managament_user
     </select>

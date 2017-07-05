@@ -5,7 +5,7 @@ package org.sinoku.common.entity.common;
  * Created by ao.shen on 2017/6/29.
  * 通用结果实体类
  */
-public class ResultEntity {
+public class ResultEntity extends CommonEntity{
 
     /***********当前页码***************/
     public static final String pageindex = "pageindex";
@@ -19,11 +19,16 @@ public class ResultEntity {
 
     protected Integer returnCode;
 
-    private Long rowCount;
-
-    private Integer pageIndex;
-
     protected String message = "";
+
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     protected Object result;
 
@@ -51,12 +56,19 @@ public class ResultEntity {
         return pageindex;
     }
 
-    public static String getPageSize() {
-        return pageSize;
+
+    public static ResultEntity getSuccessResult(String message){
+        ResultEntity entity = new ResultEntity();
+        entity.setMessage(message);
+        entity.setReturnCode(0);
+        return entity;
     }
 
-    public static String getTotal() {
-        return total;
+    public static ResultEntity getErrorResult(String message){
+        ResultEntity entity = new ResultEntity();
+        entity.setMessage(message);
+        entity.setReturnCode(999);
+        return entity;
     }
 
 }

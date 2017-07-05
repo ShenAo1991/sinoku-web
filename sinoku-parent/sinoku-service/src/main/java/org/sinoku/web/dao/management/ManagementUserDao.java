@@ -1,6 +1,6 @@
 package org.sinoku.web.dao.management;
 
-import org.sinoku.common.entity.management.ManagementUser;
+import org.sinoku.common.entity.management.ManagementUserEntity;
 
 import java.util.List;
 
@@ -13,5 +13,5 @@ public interface ManagementUserDao {
     /**
      * 获取用户
      * */
-    public List<ManagementUser> getManagementUser();
+    public List<ManagementUserEntity> getManagementUser();
 }
