@@ -3,9 +3,20 @@
 <mapper namespace="org.sinoku.web.dao.management.ManagementUserDao" >
 
 
+    <resultMap id="managementUserMap" type="org.sinoku.common.entity.management.ManagementUserEntity">
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        <result column="mobile_num" property="mobileNum" jdbcType="VARCHAR" />
+
+    </resultMap>
+
     <select id="getManagementUser" resultType="org.sinoku.common.entity.management.ManagementUserEntity">
-      SELECT name,password
+      SELECT <include refid="managementUserMap"/>
       FROM managament_user
+      WHERE 1=1
     </select>
+
 
 </mapper>
