@@ -13,5 +13,12 @@ public interface ManagementUserDao {
     /**
      * 获取用户
      * */
-    public List<ManagementUserEntity> getManagementUser();
+    public List<ManagementUserEntity> getManagementUser(ManagementUserEntity userEntity);
+
+    /**
+     * 添加运营用户
+     * @param userEntity
+     * @return
+     */
+    public Integer addManagementUser(ManagementUserEntity userEntity);
 }

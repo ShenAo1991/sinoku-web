@@ -3,7 +3,8 @@ package org.sinoku.common.entity.management;
 import java.io.Serializable;
 
 /**
- * Created by ao.shen on 2017/7/2.
+ *
+ *  Created by ao.shen on 2017/7/2.
  */
 public class ManagementModuleEntity implements Serializable{
 
@@ -14,6 +15,16 @@ public class ManagementModuleEntity implements Serializable{
     private String moduleUrl;
 
     private Integer isDom;
+
+    private Integer isVisble;
+
+    public Integer getIsVisble() {
+        return isVisble;
+    }
+
+    public void setIsVisble(Integer isVisble) {
+        this.isVisble = isVisble;
+    }
 
     public Integer getId() {
         return id;
@@ -46,4 +57,5 @@ public class ManagementModuleEntity implements Serializable{
     public void setIsDom(Integer isDom) {
         this.isDom = isDom;
     }
+
 }
