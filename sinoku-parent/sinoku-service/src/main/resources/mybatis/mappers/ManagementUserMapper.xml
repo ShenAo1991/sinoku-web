@@ -9,13 +9,30 @@
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
         <result column="mobile_num" property="mobileNum" jdbcType="VARCHAR" />
-
+        <result column="" />
     </resultMap>
 
-    <select id="getManagementUser" resultType="org.sinoku.common.entity.management.ManagementUserEntity">
-      SELECT <include refid="managementUserMap"/>
-      FROM managament_user
+    <sql id="userResult">
+      id,user_name,create_time,update_time,mobile_num
+    </sql>
+
+
+    <select id="getManagementUser" resultMap="managementUserMap" parameterType="org.sinoku.common.entity.management.ManagementUserEntity">
+      SELECT <include refid="userResult"/>
+      FROM managament_user u
       WHERE 1=1
+        <if test="id!=null">
+          AND u.id = #{id,jdbcType=INTEGER}
+        </if>
+        <if test="userName!=null and userName!='' ">
+          AND u.user_name = #{userName,jdbcType=VARCHAR}
+        </if>
+        <if test="password!=null and password!='' ">
+          AND u.password = #{password,jdbcType=VARCHAR}
+        </if>
+        <if test="mobileNum!=null and mobileNum!='' ">
+          AND u.mobile_num = #{mobileNum,jdbcType=VARCHAR}
+        </if>
     </select>
 
 
