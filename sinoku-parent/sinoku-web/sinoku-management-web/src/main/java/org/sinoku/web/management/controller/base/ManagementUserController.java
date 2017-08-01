@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -31,6 +32,13 @@ public class ManagementUserController {
         System.out.println("111");
         return null;
 
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/get1")
+    public String get1(HttpServletRequest request){
+        String header = request.getHeader("User-Agent");
+        return header;
     }
 
 }
