@@ -1,4 +1,4 @@
-package org.sinoku.web.management.controller.base;
+package org.sinoku.web.controller.base;
 
 import org.sinoku.common.entity.common.ResultEntity;
 import org.sinoku.common.entity.management.ManagementUserEntity;

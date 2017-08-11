@@ -32,6 +32,16 @@
 	<import resource="classpath:spring/spring-servlet.xml" />
 	<import resource="classpath:spring/spring-transaction.xml" />
 
+	<!--拦截器-->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 默认所有的请求都进行拦截 -->
+			<mvc:mapping path="/**"/>
+			<bean id="authorityInterceptor" class="org.sinoku.web.interceptors.AuthorityInterceptor"/>
+		</mvc:interceptor>
+
+	</mvc:interceptors>
+
 	<!-- 上传文件拦截，设置最大上传文件大小   10M=10*1024*1024(B)=10485760 bytes -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="10485760" />
