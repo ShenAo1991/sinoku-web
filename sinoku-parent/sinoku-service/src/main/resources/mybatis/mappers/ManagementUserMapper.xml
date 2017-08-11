@@ -8,12 +8,11 @@
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-        <result column="mobile_num" property="mobileNum" jdbcType="VARCHAR" />
-        <result column="" />
+        <result column="user_tel" property="userTel" jdbcType="VARCHAR" />
     </resultMap>
 
     <sql id="userResult">
-      id,user_name,create_time,update_time,mobile_num
+      id,user_name,create_time,update_time,user_tel
     </sql>
 
 
@@ -31,7 +30,7 @@
           AND u.password = #{password,jdbcType=VARCHAR}
         </if>
         <if test="mobileNum!=null and mobileNum!='' ">
-          AND u.mobile_num = #{mobileNum,jdbcType=VARCHAR}
+          AND u.user_tel = #{mobileNum,jdbcType=VARCHAR}
         </if>
     </select>
 
