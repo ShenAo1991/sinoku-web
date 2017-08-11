@@ -18,7 +18,7 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
     private String userName;
 
     /**密码*/
-    private String password;
+    private String userPassword;
 
     /**创建时间*/
     private Date createTime;
@@ -27,7 +27,7 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
     private Date updateTime;
 
     /**手机号码*/
-    private String mobileNum;
+    private String userTel;
 
     /**是否删除 0否 1是*/
     private Integer isDelete;
@@ -47,14 +47,6 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Date getCreateTime() {
@@ -81,11 +73,19 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
         this.isDelete = isDelete;
     }
 
-    public String getMobileNum() {
-        return mobileNum;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setMobileNum(String mobileNum) {
-        this.mobileNum = mobileNum;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserTel() {
+        return userTel;
+    }
+
+    public void setUserTel(String userTel) {
+        this.userTel = userTel;
     }
 }

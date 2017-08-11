@@ -28,7 +28,8 @@ public class ManagementUserController {
     @RequestMapping(value = "/adduser")
     public ResultEntity addManagementUser(ManagementUserEntity user){
 
-        //List<ManagementUserEntity> userList = dao.getManagementUser();
+
+        List<ManagementUserEntity> userList = dao.getManagementUser(new ManagementUserEntity());
         System.out.println("111");
         return null;
 
