@@ -20,6 +20,9 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
     /**密码*/
     private String userPassword;
 
+    /**验证码*/
+    private String verficationCode;
+
     /**创建时间*/
     private Date createTime;
 
@@ -87,5 +90,13 @@ public class ManagementUserEntity extends CommonEntity implements Serializable{
 
     public void setUserTel(String userTel) {
         this.userTel = userTel;
+    }
+
+    public String getVerficationCode() {
+        return verficationCode;
+    }
+
+    public void setVerficationCode(String verficationCode) {
+        this.verficationCode = verficationCode;
     }
 }

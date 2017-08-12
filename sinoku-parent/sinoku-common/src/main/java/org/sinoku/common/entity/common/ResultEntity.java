@@ -7,15 +7,7 @@ package org.sinoku.common.entity.common;
  */
 public class ResultEntity extends CommonEntity{
 
-    /***********当前页码***************/
-    public static final String pageindex = "pageindex";
 
-    /***********最大页码***************/
-    public static final String pageSize = "pageSize";
-
-
-    /************总条数**************/
-    public static final String total = "total";
 
     protected Integer returnCode;
 
@@ -44,6 +36,7 @@ public class ResultEntity extends CommonEntity{
         this.returnCode = returnCode;
     }
 
+
     public Object getResult() {
         return result;
     }
@@ -52,22 +45,10 @@ public class ResultEntity extends CommonEntity{
         this.result = result;
     }
 
-    public static String getPageindex() {
-        return pageindex;
-    }
-
-
     public static ResultEntity getSuccessResult(String message){
         ResultEntity entity = new ResultEntity();
         entity.setMessage(message);
         entity.setReturnCode(0);
-        return entity;
-    }
-
-    public static ResultEntity getErrorResult(String message){
-        ResultEntity entity = new ResultEntity();
-        entity.setMessage(message);
-        entity.setReturnCode(999);
         return entity;
     }
 

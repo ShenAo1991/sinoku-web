@@ -21,7 +21,17 @@ public class ParamsValidateUtils {
         if(StringUtils.isEmpty(params.getUserName())){
             entity.setReturnCode(ManagementNoticeEnums.USERNAME_NULL.getValue());
             entity.setMessage(ManagementNoticeEnums.USERNAME_NULL.getName());
+        }else if(StringUtils.isEmpty(params.getUserPassword())){
+            entity.setReturnCode(ManagementNoticeEnums.USERPASSWORD_NULL.getValue());
+            entity.setMessage(ManagementNoticeEnums.USERPASSWORD_NULL.getName());
+        }else if(StringUtils.isEmpty(params.getVerficationCode())){
+            entity.setReturnCode(ManagementNoticeEnums.VERIFICATION_CODE_NULL.getValue());
+            entity.setMessage(ManagementNoticeEnums.VERIFICATION_CODE_NULL.getName());
+        }else {
+            entity = ResultEntity.getSuccessResult("");
         }
+
         return entity;
     }
+
 }
