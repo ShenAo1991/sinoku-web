@@ -15,6 +15,11 @@ public class ParamsValidateUtils {
 
     private static Logger logger = LoggerFactory.getLogger(ParamsValidateUtils.class);
 
+    /**
+     * 判断登录参数是否为空
+     * @param params
+     * @return
+     */
     public static ResultEntity ifLoginParamsNull(ManagementUserEntity params){
         ResultEntity entity = new ResultEntity();
         logger.debug("开始校验登录参数");
@@ -33,5 +38,6 @@ public class ParamsValidateUtils {
 
         return entity;
     }
+
 
 }
