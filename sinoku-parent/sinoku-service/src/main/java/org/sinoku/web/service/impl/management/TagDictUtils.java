@@ -27,10 +27,10 @@ public class TagDictUtils {
         try {
             BufferedReader bre = null;
 
-            String file = "/Users/ao.shen/Downloads/asde.txt";
+            String file = "/Users/ao.shen/Desktop/asdf.txt";
 
             bre = new BufferedReader(new FileReader(file));//此时获取到的bre就是整个文件的缓存流
-            FileWriter fw = new FileWriter("/Users/ao.shen/Downloads/sinoku.txt");
+            FileWriter fw = new FileWriter("/Users/ao.shen/Desktop/hehe.txt");
             while ((str = bre.readLine()) != null) // 判断最后一行不存在，为空结束循环
             {
                 if("{}".equalsIgnoreCase(str)||StringUtils.isEmpty(str)){
