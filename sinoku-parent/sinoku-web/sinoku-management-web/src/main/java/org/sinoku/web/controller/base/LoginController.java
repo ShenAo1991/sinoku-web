@@ -3,7 +3,6 @@ package org.sinoku.web.controller.base;
 import org.sinoku.common.entity.common.ResultEntity;
 import org.sinoku.common.entity.management.ManagementUserEntity;
 import org.sinoku.web.service.management.ManagementUserService;
-import org.sinoku.web.utils.ParamsValidateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ao.shen on 2017/7/2.
@@ -24,7 +25,9 @@ public class LoginController {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
-    private ManagementUserService service;
+    private ManagementUserService managementUserService;
+
+    String token = "error";
 
     @ResponseBody
     @RequestMapping(value = "/manage/login")
@@ -34,7 +37,7 @@ public class LoginController {
 
         try{
             //1.参数校验
-            resultEntity = service.login(entity);
+            resultEntity = managementUserService.login(entity);
             //2.密码加密,根据用户名密码获取用户
             //3.获取权限
             //4.放入session
@@ -50,6 +53,8 @@ public class LoginController {
     public ModelAndView toIndex(){
         return new ModelAndView("/page/index.jsp");
     }
+
+
 
 
 }

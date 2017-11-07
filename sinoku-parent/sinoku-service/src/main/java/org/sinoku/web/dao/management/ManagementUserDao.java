@@ -21,4 +21,11 @@ public interface ManagementUserDao {
      * @return
      */
     public Integer addManagementUser(ManagementUserEntity userEntity);
+
+    /**
+     * 获取登录用户
+     * @param entity
+     * @return
+     */
+    public ManagementUserEntity getLoginManagement(ManagementUserEntity entity);
 }

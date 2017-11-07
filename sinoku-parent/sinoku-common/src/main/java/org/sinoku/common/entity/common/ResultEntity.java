@@ -9,7 +9,7 @@ public class ResultEntity extends CommonEntity{
 
 
 
-    protected Integer returnCode;
+    protected Integer returncode;
 
     protected String message = "";
 
@@ -28,14 +28,13 @@ public class ResultEntity extends CommonEntity{
         super();
     }
 
-    public Integer getReturnCode() {
-        return returnCode;
+    public Integer getReturncode() {
+        return returncode;
     }
 
-    public void setReturnCode(Integer returnCode) {
-        this.returnCode = returnCode;
+    public void setReturncode(Integer returncode) {
+        this.returncode = returncode;
     }
-
 
     public Object getResult() {
         return result;
@@ -48,7 +47,7 @@ public class ResultEntity extends CommonEntity{
     public static ResultEntity getSuccessResult(String message){
         ResultEntity entity = new ResultEntity();
         entity.setMessage(message);
-        entity.setReturnCode(0);
+        entity.setReturncode(0);
         return entity;
     }
 
