@@ -12,8 +12,10 @@
         window.scrollTo(0, 1);
     } </script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/static/lib/jquery/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/static/js/business/login/login.js"></script>
     <link href="<%=request.getContextPath()%>/static/css/login/style.css" rel='stylesheet' type='text/css'/>
+    <link href="<%=request.getContextPath()%>/static/lib/layui/css/layui.css" rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/static/lib/layui/layui.all.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/static/js/business/login/login.js"></script>
 </head>
 <body>
 
@@ -22,14 +24,12 @@
     <div class="avtar">
         <img src="<%=request.getContextPath()%>/static/image/login/avtar.png"/>
     </div>
-    <input type="text" class="text" value="userName" onfocus="this.value = '';"
-           onblur="if (this.value == '') {this.value = '请输入用户名';}">
+    <input id="userName" type="text" class="text" value=" " >
     <div class="key">
-        <input type="password" value="userPwd" onfocus="this.value = '';"
-               onblur="if (this.value == '') {this.value = 'Password';}">
+        <input id="password" type="password" value="" >
     </div>
     <div class="signin">
-        <input type="submit" value="登录">
+        <input type="submit" onclick="login()" value="登录">
     </div>
 </div>
 <div class="copy-rights">
