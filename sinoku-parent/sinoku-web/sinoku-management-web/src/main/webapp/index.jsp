@@ -1,5 +1,2 @@
-<html>
-<body>
-<h2>Hello Sinoku</h2>
-</body>
-</html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:forward page="/WEB-INF/page/login/index.jsp"/>
