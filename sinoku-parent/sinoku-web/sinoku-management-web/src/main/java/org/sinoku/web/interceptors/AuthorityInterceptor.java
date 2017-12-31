@@ -48,12 +48,7 @@ public class AuthorityInterceptor extends HandlerInterceptorAdapter {
                 return true;
             }
         }
-        // 验证用户权限
-        Object userId = request.getSession().getAttribute("userId");
-        if (null != userId && AuthorityUtil.hasUserUrlAuth(Integer.valueOf(userId.toString()), uri)) {
-            log(String.format("Allow access to %s", uri), request);
-            return true;
-        }
+
         // 无权限
         response.setContentType("text/html;charset=utf-8");
         //response.getWriter().write(JSONObject.toJSON(ResultEntity.getResult(-1, "")).toString());

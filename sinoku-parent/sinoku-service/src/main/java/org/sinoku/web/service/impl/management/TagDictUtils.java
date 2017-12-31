@@ -5,7 +5,6 @@ import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.HashMap;
@@ -27,7 +26,7 @@ public class TagDictUtils {
         try {
             BufferedReader bre = null;
 
-            String file = "/Users/ao.shen/Desktop/asdf.txt";
+            String file = "/Users/ao.shen/Desktop/extag.txt";
 
             bre = new BufferedReader(new FileReader(file));//此时获取到的bre就是整个文件的缓存流
             FileWriter fw = new FileWriter("/Users/ao.shen/Desktop/hehe.txt");
@@ -36,9 +35,14 @@ public class TagDictUtils {
                 if("{}".equalsIgnoreCase(str)||StringUtils.isEmpty(str)){
                     continue;
                 }
+                //去除地址标签
+
                 JSONObject jsonObject = JSONObject.parseObject(str);
 
                 for (Map.Entry<String, Object> entry : jsonObject.entrySet()) {
+                    if(entry.getKey().startsWith("012.")){
+                        continue;
+                    }
                     if(tags.containsKey(entry.getKey())){
                         Integer _i = nums.get(entry.getKey());
                         nums.put(entry.getKey(),_i+1);
@@ -61,4 +65,7 @@ public class TagDictUtils {
             e.printStackTrace();
         }
     }
+
+
+
 }

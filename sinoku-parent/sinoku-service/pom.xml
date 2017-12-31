@@ -166,6 +166,11 @@
             <artifactId>gson</artifactId>
             <version>2.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.sinoku</groupId>
+            <artifactId>sinoku-facade</artifactId>
+            <version>${sinoku-facade.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
