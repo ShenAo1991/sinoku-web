@@ -22,7 +22,7 @@ function login() {
     }
     $.ajax({
         type: "POST",
-        url:'/material/addbgm.do',
+        url:'/index/manage/login.do',
         data:{
             userName : userName,
             userPassword :password
@@ -34,7 +34,7 @@ function login() {
         success: function(data) {
             var json = eval('(' + data + ')');
             if(json.code==0){
-
+                window.location.href="/index/index.do";
             }else{
                 layer.msg('系统异常');
             }

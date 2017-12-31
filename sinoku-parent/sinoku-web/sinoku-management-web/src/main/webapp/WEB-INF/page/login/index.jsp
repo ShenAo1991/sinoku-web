@@ -26,7 +26,7 @@
     </div>
     <input id="userName" type="text" class="text" value=" " >
     <div class="key">
-        <input id="password" type="password" value="" >
+        <input id="userPwd" type="password" value="" >
     </div>
     <div class="signin">
         <input type="submit" onclick="login()" value="登录">

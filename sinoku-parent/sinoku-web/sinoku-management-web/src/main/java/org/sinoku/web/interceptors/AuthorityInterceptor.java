@@ -3,7 +3,7 @@ package org.sinoku.web.interceptors;
 
 import org.apache.log4j.NDC;
 import org.sinoku.common.utils.common.IpUtils;
-import org.sinoku.web.controller.base.LoginController;
+import org.sinoku.web.controller.base.IndexController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.method.HandlerMethod;
@@ -33,9 +33,12 @@ public class AuthorityInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 允许访问的Controller类
+        if(true){
+            return true;
+        }
         if (handler instanceof HandlerMethod) {
             HandlerMethod handlerMethod = (HandlerMethod) handler;
-            if (handlerMethod.getBean() instanceof LoginController) {
+            if (handlerMethod.getBean() instanceof IndexController) {
                 log(String.format("Allow access to %s", handlerMethod.getBean().getClass().getName()), request);
                 return true;
             }

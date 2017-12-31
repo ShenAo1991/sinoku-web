@@ -1,5 +1,6 @@
 package org.sinoku.web.service.impl.management;
 
+import org.sinoku.common.entity.common.LayuiEntity;
 import org.sinoku.common.entity.common.ResultEntity;
 import org.sinoku.common.entity.management.ManagementUserEntity;
 import org.sinoku.common.utils.rsa.MD5;
@@ -24,13 +25,10 @@ public class ManagementUserServiceImpl implements ManagementUserService{
     private ManagementUserDao managementUserDao;
 
     @Override
-    public ResultEntity login(ManagementUserEntity entity) {
+    public LayuiEntity login(ManagementUserEntity entity) {
 
         //1.校验参数
-        ResultEntity result = ParamsValidateUtils.ifLoginParamsNull(entity);
-        if(result.getReturncode()!=0){
-            return result;
-        }
+
         //2.密码加密
         entity.setUserPassword(MD5.getMD5Str(entity.getUserPassword()));
         //3.获取用户

@@ -1,5 +1,6 @@
 package org.sinoku.web.controller.base;
 
+import org.sinoku.common.entity.common.LayuiEntity;
 import org.sinoku.common.entity.common.ResultEntity;
 import org.sinoku.common.entity.management.ManagementUserEntity;
 import org.sinoku.web.service.management.ManagementUserService;
@@ -19,10 +20,10 @@ import java.util.Map;
  * Created by ao.shen on 2017/7/2.
  */
 @Controller
-@RequestMapping(value = "/login")
-public class LoginController {
+@RequestMapping(value = "/index")
+public class IndexController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
 
     @Autowired
     private ManagementUserService managementUserService;
@@ -31,13 +32,14 @@ public class LoginController {
 
     @ResponseBody
     @RequestMapping(value = "/manage/login")
-    public ResultEntity login(HttpServletRequest request,ManagementUserEntity entity){
+    public LayuiEntity login(HttpServletRequest request, ManagementUserEntity userParams){
 
-        ResultEntity resultEntity = new ResultEntity();
+        LayuiEntity entity = new LayuiEntity();
 
         try{
             //1.参数校验
-            resultEntity = managementUserService.login(entity);
+            entity.setCode(0);
+            entity.setMsg("登录成功");
             //2.密码加密,根据用户名密码获取用户
             //3.获取权限
             //4.放入session
@@ -45,13 +47,13 @@ public class LoginController {
             LOGGER.error("用户登录出现异常.异常原因:{}",e);
             return null;
         }
-        return  null;
+        return  entity;
 
     }
 
     @RequestMapping(value = "index")
     public ModelAndView toIndex(){
-        return new ModelAndView("/page/index.jsp");
+        return new ModelAndView("/index/index");
     }
 
 

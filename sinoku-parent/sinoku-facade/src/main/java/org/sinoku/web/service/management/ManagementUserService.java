@@ -1,6 +1,6 @@
 package org.sinoku.web.service.management;
 
-import org.sinoku.common.entity.common.ResultEntity;
+import org.sinoku.common.entity.common.LayuiEntity;
 import org.sinoku.common.entity.management.ManagementUserEntity;
 
 /**
@@ -13,5 +13,5 @@ public interface ManagementUserService {
      * @param entity
      * @return
      */
-    public ResultEntity login(ManagementUserEntity entity);
+    public LayuiEntity login(ManagementUserEntity entity);
 }
