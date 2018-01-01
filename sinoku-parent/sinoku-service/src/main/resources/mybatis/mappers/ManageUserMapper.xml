@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.sinoku.web.dao.management.ManagementUserDao" >
+<mapper namespace="org.sinoku.web.dao.management.ManageUserDao" >
 
 
-    <resultMap id="managementUserMap" type="org.sinoku.common.entity.management.ManagementUserEntity">
+    <resultMap id="manageUserMap" type="org.sinoku.common.entity.manage.ManageUserEntity">
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
@@ -16,9 +16,9 @@
     </sql>
 
 
-    <select id="getManagementUser" resultMap="managementUserMap" parameterType="org.sinoku.common.entity.management.ManagementUserEntity">
+    <select id="getManageUser" resultMap="manageUserMap" parameterType="org.sinoku.common.entity.manage.ManageUserEntity">
       SELECT <include refid="userResult"/>
-      FROM managament_user u
+      FROM manage_user u
       WHERE 1=1
         <if test="id!=null">
           AND u.id = #{id,jdbcType=INTEGER}
@@ -34,9 +34,9 @@
         </if>
     </select>
 
-    <select id="getLoginManagement" resultMap="managementUserMap" parameterType="org.sinoku.common.entity.management.ManagementUserEntity">
+    <select id="getLoginManage" resultMap="managementUserMap" parameterType="org.sinoku.common.entity.manage.ManageUserEntity">
         SELECT <include refid="userResult"/>
-        FROM managament_user u
+        FROM manage_user u
         WHERE 1=1
         <if test="userName!=null and userName!='' ">
             AND u.user_name = #{userName,jdbcType=VARCHAR}

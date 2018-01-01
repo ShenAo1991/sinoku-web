@@ -1,4 +1,4 @@
-package org.sinoku.common.entity.management;
+package org.sinoku.common.entity.manage;
 
 import org.sinoku.common.entity.common.CommonEntity;
 
@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 运营角色
  * Created by ao.shen on 2017/6/30.
  */
-public class ManagementRoleEntity extends CommonEntity implements Serializable{
+public class ManageRoleEntity extends CommonEntity implements Serializable{
 
     private Integer id;
 

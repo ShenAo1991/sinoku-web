@@ -1,7 +1,7 @@
 package org.sinoku.web.service.management;
 
 import org.sinoku.common.entity.common.LayuiEntity;
-import org.sinoku.common.entity.management.ManagementUserEntity;
+import org.sinoku.common.entity.manage.ManageUserEntity;
 
 /**
  * Created by ao.shen on 2017/8/11.
@@ -13,5 +13,5 @@ public interface ManagementUserService {
      * @param entity
      * @return
      */
-    public LayuiEntity login(ManagementUserEntity entity);
+    public LayuiEntity login(ManageUserEntity entity);
 }

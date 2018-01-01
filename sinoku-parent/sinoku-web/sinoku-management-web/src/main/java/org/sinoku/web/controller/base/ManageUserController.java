@@ -1,7 +1,7 @@
 package org.sinoku.web.controller.base;
 
 import org.sinoku.common.entity.common.ResultEntity;
-import org.sinoku.common.entity.management.ManagementUserEntity;
+import org.sinoku.common.entity.manage.ManageUserEntity;
 import org.sinoku.web.dao.management.ManagementUserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/management/user")
-public class ManagementUserController {
+public class ManageUserController {
 
     @Autowired
     private ManagementUserDao dao;
@@ -26,10 +26,10 @@ public class ManagementUserController {
 
     @ResponseBody
     @RequestMapping(value = "/adduser")
-    public ResultEntity addManagementUser(ManagementUserEntity user){
+    public ResultEntity addManagementUser(ManageUserEntity user){
 
 
-        List<ManagementUserEntity> userList = dao.getManagementUser(new ManagementUserEntity());
+        List<ManageUserEntity> userList = dao.getManagementUser(new ManageUserEntity());
         System.out.println("111");
         return null;
 

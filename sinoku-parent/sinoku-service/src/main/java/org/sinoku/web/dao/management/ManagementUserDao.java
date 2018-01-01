@@ -1,6 +1,6 @@
 package org.sinoku.web.dao.management;
 
-import org.sinoku.common.entity.management.ManagementUserEntity;
+import org.sinoku.common.entity.manage.ManageUserEntity;
 
 import java.util.List;
 
@@ -13,19 +13,19 @@ public interface ManagementUserDao {
     /**
      * 获取用户
      * */
-    public List<ManagementUserEntity> getManagementUser(ManagementUserEntity userEntity);
+    public List<ManageUserEntity> getManagementUser(ManageUserEntity userEntity);
 
     /**
      * 添加运营用户
      * @param userEntity
      * @return
      */
-    public Integer addManagementUser(ManagementUserEntity userEntity);
+    public Integer addManagementUser(ManageUserEntity userEntity);
 
     /**
      * 获取登录用户
      * @param entity
      * @return
      */
-    public ManagementUserEntity getLoginManagement(ManagementUserEntity entity);
+    public ManageUserEntity getLoginManagement(ManageUserEntity entity);
 }

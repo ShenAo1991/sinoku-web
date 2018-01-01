@@ -1,4 +1,4 @@
-package org.sinoku.common.entity.management;
+package org.sinoku.common.entity.manage;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import org.sinoku.common.entity.common.CommonEntity;
@@ -10,7 +10,7 @@ import java.util.Date;
  *  权限模块entity
  *  Created by ao.shen on 2017/7/2.
  */
-public class ManagementModuleEntity extends CommonEntity implements Serializable{
+public class ManageModuleEntity extends CommonEntity implements Serializable{
 
     private static final long serialVersionUID = -4476327219680253466L;
 

@@ -3,7 +3,7 @@ package org.sinoku.web.utils;
 import org.apache.commons.lang3.StringUtils;
 import org.sinoku.common.ManagementNoticeEnums;
 import org.sinoku.common.entity.common.ResultEntity;
-import org.sinoku.common.entity.management.ManagementUserEntity;
+import org.sinoku.common.entity.manage.ManageUserEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +20,7 @@ public class ParamsValidateUtils {
      * @param params
      * @return
      */
-    public static ResultEntity ifLoginParamsNull(ManagementUserEntity params){
+    public static ResultEntity ifLoginParamsNull(ManageUserEntity params){
         ResultEntity entity = new ResultEntity();
         logger.debug("开始校验登录参数");
         if(StringUtils.isEmpty(params.getUserName())){

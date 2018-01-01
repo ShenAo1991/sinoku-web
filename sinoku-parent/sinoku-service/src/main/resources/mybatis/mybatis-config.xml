@@ -32,7 +32,7 @@
 	</settings>
 
 	<mappers>
-		<mapper resource="mybatis/mappers/ManagementUserMapper.xml"/>
+		<mapper resource="mybatis/mappers/ManageUserMapper.xml"/>
 	</mappers>
 
 </configuration>

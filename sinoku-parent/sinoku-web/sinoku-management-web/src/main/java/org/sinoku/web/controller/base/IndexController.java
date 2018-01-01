@@ -1,8 +1,7 @@
 package org.sinoku.web.controller.base;
 
 import org.sinoku.common.entity.common.LayuiEntity;
-import org.sinoku.common.entity.common.ResultEntity;
-import org.sinoku.common.entity.management.ManagementUserEntity;
+import org.sinoku.common.entity.manage.ManageUserEntity;
 import org.sinoku.web.service.management.ManagementUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by ao.shen on 2017/7/2.
@@ -32,7 +29,7 @@ public class IndexController {
 
     @ResponseBody
     @RequestMapping(value = "/manage/login")
-    public LayuiEntity login(HttpServletRequest request, ManagementUserEntity userParams){
+    public LayuiEntity login(HttpServletRequest request, ManageUserEntity userParams){
 
         LayuiEntity entity = new LayuiEntity();
 
