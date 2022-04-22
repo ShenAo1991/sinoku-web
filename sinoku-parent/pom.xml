@@ -24,9 +24,9 @@
         <sinoku-common-config.version>1.0-SNAPSHOT</sinoku-common-config.version>
         <sinoku-management-web.version>1.0-SNAPSHOT</sinoku-management-web.version>
         <!-- spring版本号 -->
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
         <sinoku-portal-web.version>1.0-SNAPSHOT</sinoku-portal-web.version>
-        <org.springframework.version>4.0.9.RELEASE</org.springframework.version>
+        <org.springframework.version>5.3.19</org.springframework.version>
         <gson.version>2.5</gson.version>
         <json.version>20150729</json.version>
         <fastjson.version>1.1.41</fastjson.version>
